@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# check for number of parameters
+if [ $# -ne 1 ]
+then
+	echo "Enter the device name"
+	exit
+fi
+
+# get device name from arguement
+device=$1
+
 # ccache
 export USE_CCACHE=1
 export CCACHE_DIR=/home/ccache/sanjay
